@@ -12,7 +12,7 @@ RUN apt-get install --yes make libtool python3 libdb4.8-dev libdb4.8++-dev libmi
 	libboost-all-dev apt-utils automake pkg-config libssl1.0-dev \
 	g++-7-aarch64-linux-gnu g++-7-arm-linux-gnueabihf \
 	gcc-7-aarch64-linux-gnu gcc-7-arm-linux-gnueabihf \	
-    && update-alternatives --config x86_64-w64-mingw32-g++ \
-	&& update-alternatives --config i686-w64-mingw32-g++
+    && update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix   \
+	&& update-alternatives --set i686-w64-mingw32-g++ /usr/bin/i686-w64-mingw32-g++-posix
 	
-WORKDIR /home/generator18
+WORKDIR /home/build
