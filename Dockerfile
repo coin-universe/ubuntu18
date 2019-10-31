@@ -59,7 +59,7 @@ RUN apt-get install --yes colormake htop nano rsync dos2unix
 RUN apt-get install --yes g++-mingw-w64-i686 mingw-w64-i686-dev
 
 RUN update-alternatives --set i686-w64-mingw32-g++ /usr/bin/i686-w64-mingw32-g++-posix
-RUN update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
+#RUN update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
 
 WORKDIR /home/build
 
