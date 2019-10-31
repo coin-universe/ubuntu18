@@ -26,6 +26,7 @@ MAINTAINER Smart Insider <smartyinsider@gmail.com>
 
 
 
+RUN apt-get update --yes 
 RUN apt-get install --yes software-properties-common
 RUN add-apt-repository --yes ppa:bitcoin/bitcoin
 RUN apt-get update --yes
