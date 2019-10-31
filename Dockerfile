@@ -11,8 +11,17 @@ RUN apt-get install --yes libssl1.0-dev make g++-multilib libtool python3 libdb4
 	libzmq3-dev libqrencode-dev bsdmainutils libncurses5-dev libc6-armel-cross libc6-dev-armel-cross \
 	libevent-dev gawk python-dev htop gettext lcov yasm ccache default-jre default-jdk pkgconf vim cmake librsvg2-bin imagemagick libcap-dev libbz2-dev python-setuptools clang wget nsis libjpeg-dev dos2unix libgmp-dev \
 	libboost-all-dev apt-utils automake pkg-config libssl1.0-dev \
+	g++-7-aarch64-linux-gnu g++-7-arm-linux-gnueabihf \
+	gcc-7-aarch64-linux-gnu gcc-7-arm-linux-gnueabihf \	
     && update-alternatives --config x86_64-w64-mingw32-g++ \
 	&& update-alternatives --config i686-w64-mingw32-g++
 	
 WORKDIR /home/generator18
+
+
 	
+	
+ g++-aarch64-linux-gnu : Depends:  (>= 7.4.0-1~) but it is not going to be installed
+ g++-arm-linux-gnueabihf : Depends:  (>= 7.4.0-1~) but it is not going to be installed
+ gcc-aarch64-linux-gnu : Depends: gcc-7-aarch64-linux-gnu (>= 7.4.0-1~) but it is not going to be installed
+ gcc-arm-linux-gnueabihf : Depends: gcc-7-arm-linux-gnueabihf (>= 7.4.0-1~) but it is not going to be installed
