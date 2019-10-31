@@ -9,10 +9,16 @@ RUN apt-get install --yes make libtool python3 libdb4.8-dev libdb4.8++-dev libmi
 	g++-mingw-w64-x86-64 mingw-w64-x86-64-dev g++-mingw-w64-i686 mingw-w64-i686-dev g++-arm-linux-gnueabihf g++-aarch64-linux-gnu binutils-arm-linux-gnueabihf \
 	libzmq3-dev libqrencode-dev bsdmainutils libncurses5-dev libc6-armel-cross libc6-dev-armel-cross \
 	libevent-dev gawk python-dev htop gettext lcov yasm ccache default-jre default-jdk vim cmake librsvg2-bin imagemagick libcap-dev libbz2-dev python-setuptools clang wget nsis libjpeg-dev dos2unix libgmp-dev \
-	libboost-all-dev apt-utils automake pkg-config libssl1.0-dev \
+	libboost-all-dev apt-utils automake pkg-config libssl1.0-dev colormake \
 	g++-7-aarch64-linux-gnu g++-7-arm-linux-gnueabihf \
-	gcc-7-aarch64-linux-gnu gcc-7-arm-linux-gnueabihf \	
-    && update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix   \
+	gcc-7-aarch64-linux-gnu gcc-7-arm-linux-gnueabihf \
+	&& update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix   \
 	&& update-alternatives --set i686-w64-mingw32-g++ /usr/bin/i686-w64-mingw32-g++-posix
+	
+#FIXINGS
+#RUN apt-get install --yes software-properties-common && add-apt-repository --yes ppa:bitcoin/bitcoin && apt-get update && \
+#	apt-get install --yes libdb4.8-dev libdb4.8++-dev
+	
+
 	
 WORKDIR /home/build
