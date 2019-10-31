@@ -4,7 +4,6 @@ MAINTAINER Smart Insider <smartyinsider@gmail.com>
 
 #BASIC DEPENDS
 RUN apt-get update && apt-get install --yes build-essential autotools-dev autoconf software-properties-common && add-apt-repository --yes ppa:bitcoin/bitcoin && apt-get update
-
 RUN apt-get install --yes libssl1.0-dev make g++-multilib libtool python3 libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libqt4-dev libtiff-tools libz-dev nano rsync \
 	libprotobuf-dev protobuf-compiler libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools curl git binutils-gold gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf \
 	g++-mingw-w64-x86-64 mingw-w64-x86-64-dev g++-mingw-w64-i686 mingw-w64-i686-dev g++-arm-linux-gnueabihf g++-aarch64-linux-gnu binutils-arm-linux-gnueabihf \
@@ -17,11 +16,3 @@ RUN apt-get install --yes libssl1.0-dev make g++-multilib libtool python3 libdb4
 	&& update-alternatives --config i686-w64-mingw32-g++
 	
 WORKDIR /home/generator18
-
-
-	
-	
- g++-aarch64-linux-gnu : Depends:  (>= 7.4.0-1~) but it is not going to be installed
- g++-arm-linux-gnueabihf : Depends:  (>= 7.4.0-1~) but it is not going to be installed
- gcc-aarch64-linux-gnu : Depends: gcc-7-aarch64-linux-gnu (>= 7.4.0-1~) but it is not going to be installed
- gcc-arm-linux-gnueabihf : Depends: gcc-7-arm-linux-gnueabihf (>= 7.4.0-1~) but it is not going to be installed
