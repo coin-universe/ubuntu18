@@ -35,6 +35,7 @@ RUN apt-get install --yes libdb4.8-dev libdb4.8++-dev
 #BASIC DEPENDS
 #RUN apt-get update && apt-get install --yes build-essential autotools-dev autoconf software-properties-common && add-apt-repository --yes ppa:bitcoin/bitcoin && apt-get update
 
+RUN apt-get install build-essential autotools-dev autoconf --yes 
 
 RUN apt-get install --yes make automake cmake curl g++-multilib libtool binutils-gold bsdmainutils pkg-config python3
 RUN apt-get install --yes g++-arm-linux-gnueabihf binutils-arm-linux-gnueabihf \
@@ -43,7 +44,7 @@ RUN apt-get install --yes g++-arm-linux-gnueabihf binutils-arm-linux-gnueabihf \
 
 	
 #RUN apt-get install libssl-dev libgmp-dev libevent-dev libboost-all-dev --yes
-RUN apt-get install llibssl1.0-dev libgmp-dev libevent-dev libboost-all-dev --yes
+RUN apt-get install libssl1.0-dev libgmp-dev libevent-dev libboost-all-dev --yes
 
 
 
