@@ -26,8 +26,6 @@ MAINTAINER Smart Insider <smartyinsider@gmail.com>
 
 
 
-RUN apt-get install build-essential libtool bsdmainutils autotools-dev autoconf pkg-config automake python3 --yes
-
 RUN apt-get install --yes software-properties-common
 RUN add-apt-repository --yes ppa:bitcoin/bitcoin
 RUN apt-get update --yes
