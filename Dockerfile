@@ -63,7 +63,7 @@ RUN apt-get install --yes g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
 RUN update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
 
 #Extra
-RUN apt-get install git
+RUN apt-get install git --yes
 
 WORKDIR /home/build
 
