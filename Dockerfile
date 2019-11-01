@@ -62,6 +62,9 @@ RUN update-alternatives --set i686-w64-mingw32-g++ /usr/bin/i686-w64-mingw32-g++
 RUN apt-get install --yes g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
 RUN update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix
 
+#MAC OS
+RUN apt-get install --yes librsvg2-bin libtiff-tools imagemagick libcap-dev libz-dev libbz2-dev python-setuptools
+
 #Extra
 RUN apt-get install git --yes
 
